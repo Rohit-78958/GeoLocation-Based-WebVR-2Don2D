@@ -46,29 +46,26 @@ export default function PlantScene({onBack}) {
             </button>
           </Html>
 
-          <ImagePlane position={[70, 5, -28]} />
-          <ImagePlane position={[70, 5, -16]} />
-          <ImagePlane position={[70, 10, -16]} />
-          <ImagePlane position={[70, 10, -28]} />
-          <ImagePlane position={[70, 15, -16]} />
-          <ImagePlane position={[70, 15, -28]} />
+          <ImagePlane position={[70, 5, -28]} machineName={"ACE-01"} />
+          <ImagePlane position={[70, 5, -16]} machineName={"ACE-02"} />
+          <ImagePlane position={[70, 15, -16]} machineName={"ACE-03"} />
+          <ImagePlane position={[70, 15, -28]} machineName={"ACE-04"} />
           
           
-          <ImagePlane position={[70, 25, -20]} />
-          <ImagePlane position={[70, 25, -34]} />
-          <ImagePlane position={[70, 30.5, -34]} />
+          <ImagePlane position={[70, 25, -20]} machineName={"ACE-05"} />
+          <ImagePlane position={[70, 25, -34]} machineName={"ACE-06"} />
 
 
-          <ImagePlane position={[70, 18, 5]} />
-          <ImagePlane position={[70, 18, 18]} />
-          <ImagePlane position={[70, 25, 5]} />
-          <ImagePlane position={[70, 25, 18]} />
+          <ImagePlane position={[70, 16, 5]} machineName={"ACE-07"} />
+          <ImagePlane position={[70, 16, 18]} machineName={"ACE-08"} />
+          <ImagePlane position={[70, 25, 5]} machineName={"ACE-09"} />
+          <ImagePlane position={[70, 25, 18]} machineName={"ACE-10"} />
 
-          <ImagePlane position={[70, -8, -50]} scaling={0.8}/>
-          <ImagePlane position={[70, -8, -16]} scaling={0.8}/>
-          <ImagePlane position={[70, -8, -35]} scaling={0.8}/>
+          <ImagePlane position={[70, -8, -50]} machineName={"ACE-11"}/>
+          <ImagePlane position={[70, -8, -16]} machineName={"ACE-12"}/>
+          <ImagePlane position={[70, -8, -35]} machineName={"ACE-13"}/>
 
-          <ImagePlane position={[70, -3, 25]} scaling={1} />
+          <ImagePlane position={[70, -3, 25]} machineName={"ACE-14"}/>
 
         </Suspense>
     </>

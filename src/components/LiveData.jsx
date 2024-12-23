@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Html } from '@react-three/drei';
 
-function LiveDataDisplay({ machineID, distanceFactor = 20, position, onDataUpdate }) {
+function LiveDataDisplay({ machineID, distanceFactor = 16, position, onDataUpdate, machineName }) {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
 
@@ -59,7 +59,7 @@ function LiveDataDisplay({ machineID, distanceFactor = 20, position, onDataUpdat
         {/* Machine Name */}
         <h2 className="text-5xl font-bold text-center mb-3">
           {/* {machineNames[machineID] || `Machine ${machineID}`} */}
-          Rohit
+          {machineName}
         </h2>
       </div>
       <div className="bg-white/90 p-4 rounded-lg shadow-lg min-w-[200px]">
