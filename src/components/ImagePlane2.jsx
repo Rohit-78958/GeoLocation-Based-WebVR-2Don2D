@@ -2,7 +2,7 @@ import { useThree, useFrame } from '@react-three/fiber'
 import React, { useRef, useState, useEffect } from 'react'
 import { useTexture, Html } from '@react-three/drei'
 import { AlertTriangle } from 'lucide-react'
-import LiveDataDisplay from './LiveData'
+import LiveDataDisplay2 from './LiveData2'
 import * as THREE from 'three'
 
 export default function ImagePlane({ position, machineID, scaling=0.8, machineName }) {
@@ -116,9 +116,9 @@ export default function ImagePlane({ position, machineID, scaling=0.8, machineNa
       )}
 
       {isLiveDataVisible && (
-        <LiveDataDisplay 
+        <LiveDataDisplay2 
           machineData={machineData} 
-          position={[3, 4.5, 0.1]}
+          position={[-5.5, -4.5, 0.1]}
           //onDataUpdate={(data) => setMachineData(data)}
           machineName = {machineName}
         />

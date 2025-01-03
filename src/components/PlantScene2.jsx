@@ -1,11 +1,11 @@
 import React, { useState, Suspense } from 'react';
 import { Stats, Environment, Html, useProgress, PerspectiveCamera, useTexture } from '@react-three/drei';
 import { Perf } from 'r3f-perf';
-import ImagePlane from './ImagePlane';
+import ImagePlane2 from './ImagePlane2';
 import Loader from './Loader';
 
 function BackgroundImage() {
-  const texture = useTexture('images/layout.png');
+  const texture = useTexture('images/background.jpg');
 
   return (
     <mesh position={[-600, 0, -50]} rotation={[0, Math.PI / 2, 0]}>
@@ -15,7 +15,7 @@ function BackgroundImage() {
   );
 }
 
-export default function PlantScene({onBack}) {
+export default function PlantScene({onBack, Name}) {
   return (
     <>
         <PerspectiveCamera makeDefault fov={75} position={[100, 10, -8]} rotation={[0, Math.PI / 2, 0]} />
@@ -26,6 +26,24 @@ export default function PlantScene({onBack}) {
         {/* <Stats position="top-right" /> */}
         <Suspense fallback={<Loader />}>
           <BackgroundImage />
+
+          <Html fullscreen>
+          <div
+            style={{
+              position: 'absolute',
+              left: '50%',
+              transform: 'translateX(-50%)',
+              color: 'white',
+              fontSize: '32px',
+              fontWeight: 'bold',
+              zIndex: 10,
+              border: '2px solid white',
+              padding: '5px 10px',
+            }}
+          >
+            Acemicromatic
+          </div>
+        </Html>
 
           {/* Add a back button */}
           <Html fullscreen>
@@ -46,20 +64,11 @@ export default function PlantScene({onBack}) {
             </button>
           </Html>
 
-          <ImagePlane position={[70, 5, -28]} machineName={"ACE-01"} />
-          <ImagePlane position={[70, 5, -16]} machineName={"ACE-02"} />
-          <ImagePlane position={[70, 15, -16]} machineName={"ACE-03"} />
-          <ImagePlane position={[70, 15, -28]} machineName={"ACE-04"} />
           
-          
-          <ImagePlane position={[70, 25, -20]} machineName={"ACE-05"} />
-          <ImagePlane position={[70, 25, -34]} machineName={"ACE-06"} />
+          <ImagePlane2 position={[70, 15, 20]} machineName={"ACE-01"} scaling={1.5}/>
+          <ImagePlane2 position={[70, 15, -5]} machineName={"ACE-02"} scaling={1.5}/>
+          <ImagePlane2 position={[70, 15, -30]} machineName={"ACE-03"} scaling={1.5}/>
 
-
-          <ImagePlane position={[70, 16, 5]} machineName={"ACE-07"} />
-          <ImagePlane position={[70, 16, 18]} machineName={"ACE-08"} />
-          <ImagePlane position={[70, 25, 5]} machineName={"ACE-09"} />
-          <ImagePlane position={[70, 25, 18]} machineName={"ACE-10"} />
 {/* 
           <ImagePlane position={[70, -8, -50]} machineName={"ACE-11"}/>
           <ImagePlane position={[70, -8, -16]} machineName={"ACE-12"}/>

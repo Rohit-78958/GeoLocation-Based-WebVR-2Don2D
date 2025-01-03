@@ -2,6 +2,7 @@ import { Canvas } from '@react-three/fiber'
 import React, {useState, Suspense} from 'react'
 import GlobeScene from './components/Globe'
 import PlantScene from './components/PlantScene'
+import PlantScene2 from './components/PlantScene2'
 import Loader from './components/Loader'
 import CityMap from './components/CityComponent'
 
@@ -34,9 +35,10 @@ function App() {
           />
         )}
         {currentScene === 'plant' && selectedPlant && (
-          <PlantScene 
+          <PlantScene
             plant={selectedPlant}
             onBack={() => setCurrentScene('city')} 
+            Name = {"Acemicromatic"}
           />
         )}
       </Suspense>
